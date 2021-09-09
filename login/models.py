@@ -53,4 +53,4 @@ class Apointment(models.Model):
     task= models.CharField(max_length=100)
     date= models.DateField()
     status = models.CharField(max_length=40)
-    user = models.ForeignKey(User,related_name="User",on_delete=models.CASCADE)
+    user = models.ForeignKey(User,related_name="appointment",on_delete=models.CASCADE)

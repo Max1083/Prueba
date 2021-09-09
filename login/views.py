@@ -21,6 +21,8 @@ def inicio(request):
         return redirect('/')
     else:
         request.session['user_id'] = usuario[0].id
+        request.session['name'] = usuario[0].nombre
+        request.session['last_name'] = usuario[0].apellido
         return redirect('home/')
 
 def registro(request):
